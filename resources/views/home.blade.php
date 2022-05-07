@@ -7,7 +7,7 @@
         $userpaystack=$userpaystack;
     };
 
-    $homelink= url('/login');
+    $homelink= url('/register');
 @endphp
 
                     

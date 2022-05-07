@@ -43,7 +43,7 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        /*'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -61,7 +61,28 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
+        ],*/
+
+        'mysql' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL','mysql://baf31754c9fc8d:fcd0b278@us-cdbr-east-05.cleardb.net/heroku_bfc791d0ec88583?reconnect=true'),
+            'host' => env('DB_HOST', 'us-cdbr-east-05.cleardb.net'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'heroku_bfc791d0ec88583'),
+            'username' => env('DB_USERNAME', 'baf31754c9fc8d'),
+            'password' => env('DB_PASSWORD', 'fcd0b278'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
+
 
         'pgsql' => [
             'driver' => 'pgsql',

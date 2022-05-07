@@ -297,15 +297,11 @@ function phonecheck(){
 }
 
 function copyrefeererlink(){
-    var copytext = document.getElementById("invitelink");
-    alert(copytext.val);
+    var copytext = $("#invitelink").val();
 
-    /*copytext.select();
-    copytext.setSelectionRange(0,99999);
+    //navigator.clipboard.writeText(copytext);
 
-    navigator.clipboard.writeText(copytext.val);
-
-    alert('success');*/
+    alert(copytext);
 }
 
 </script>
