@@ -45,4 +45,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/register/{number}/{id}', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
+Route::get('verify-payment/{reference}', [App\Http\Controllers\Auth\HomeController::class, 'verify']);

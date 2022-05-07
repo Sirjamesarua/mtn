@@ -319,8 +319,20 @@ function payWithPaystack(e) {
       alert('Window closed.');
     },
     callback: function(response){
-      let message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
+      //let message = 'Payment complete! Reference: ' + response.reference;
+      //alert(message);
+      $.ajax({
+        type:"GET",
+        url: "{{URL::to ('verify-payment')}}/"+reference,
+        success: function(response){
+            console.log(response);
+            if(response[0].status = true){
+                $('form').prepend('<h2>${response[0].message}</h2>');
+            }else{
+                $('form').prepend('<h2>failed to verify payment</h2>');
+            }
+        }
+      })
     }
   });
   handler.openIframe();
