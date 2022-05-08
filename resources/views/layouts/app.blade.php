@@ -322,18 +322,18 @@ function payWithPaystack(e) {
       //let message = 'Payment complete! Reference: ' + response.reference;
       //alert(message);
       alert("{{URL::to ('verify-payment')}}/"+reference);
-      $.ajax({
+      /*$.ajax({
         type:"GET",
         url: "{{URL::to ('verify-payment')}}/"+reference,
         success: function(response){
-            /*console.log(response);
+            console.log(response);
             if(response[0].status = true){
                 $('form').prepend('<h2>${response[0].message}</h2>');
             }else{
                 $('form').prepend('<h2>failed to verify payment</h2>');
-            }*/
+            }
         }
-      })
+      })*/
     }
   });
   handler.openIframe();
