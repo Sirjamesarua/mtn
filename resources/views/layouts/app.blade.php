@@ -321,12 +321,11 @@ function payWithPaystack(e) {
     callback: function(response){
       //let message = 'Payment complete! Reference: ' + response.reference;
       //alert(message);
+      alert("{{URL::to ('verify-payment')}}/"+reference);
       $.ajax({
         type:"GET",
         url: "{{URL::to ('verify-payment')}}/"+reference,
         success: function(response){
-              let message = 'Payment complete! Reference: ' + response.reference;
-              alert(message);
             /*console.log(response);
             if(response[0].status = true){
                 $('form').prepend('<h2>${response[0].message}</h2>');
