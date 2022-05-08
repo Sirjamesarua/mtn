@@ -319,9 +319,9 @@ function payWithPaystack(e) {
       alert('Window closed.');
     },
     callback: function(response){
-      //let message = 'Payment complete! Reference: ' + response.reference;
-      //alert(message);
-      $.ajax({
+      let message = 'Payment complete! Reference: ' + response.reference;
+      alert(message);
+     /* $.ajax({
         type:"GET",
         url: "{{URL::to ('verify-payment')}}/"+reference,
         success: function(response){
@@ -332,7 +332,7 @@ function payWithPaystack(e) {
                 $('form').prepend('<h2>failed to verify payment</h2>');
             }
         }
-      })
+      })*/
     }
   });
   handler.openIframe();
