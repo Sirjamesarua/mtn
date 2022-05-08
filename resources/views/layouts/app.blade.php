@@ -327,7 +327,7 @@ function payWithPaystack(e) {
         //url: "{{URL::to ('verify-payment')}}/"+reference,
         url: "/verify-payment/"+response.reference,
         success: function(response){
-            console.log(response);
+            //console.log(response);
             if(response[0].status = true){
                 $('form').prepend('<h2>${response[0].message}</h2>');
             }else{
