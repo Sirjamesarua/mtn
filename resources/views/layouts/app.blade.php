@@ -321,7 +321,7 @@ function payWithPaystack(e) {
     callback: function(response){
       //let message = 'Payment complete! Reference: ' + response.reference;
       //alert(message);
-      alert("{{('verify-payment')}}/"+reference);
+      alert("verify-payment/"+reference);
       /*$.ajax({
         type:"GET",
         url: "{{URL::to ('verify-payment')}}/"+reference,
