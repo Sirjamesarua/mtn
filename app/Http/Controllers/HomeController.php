@@ -51,7 +51,7 @@ class HomeController extends Controller
          $curl = curl_init();
          $sec="sk_test_c6804e7ad469d1e972bb693b13e25018a09d3cc2";
   
-          curl_setopt_array($curl, array(
+          /*curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.paystack.co/transaction/verify/$Sreference",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
@@ -63,7 +63,7 @@ class HomeController extends Controller
               "Authorization: Bearer $sec",
               "Cache-Control: no-cache",
             ),
-          ));
+          ));*/
           
           $response = curl_exec($curl);
           $err = curl_error($curl);
