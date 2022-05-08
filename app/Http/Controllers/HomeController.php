@@ -48,7 +48,7 @@ class HomeController extends Controller
     }
 
     public function verify($reference){
-         $curl = curl_init();
+         /*$curl = curl_init();
          $sec="sk_test_c6804e7ad469d1e972bb693b13e25018a09d3cc2";
   
           curl_setopt_array($curl, array(
@@ -69,7 +69,8 @@ class HomeController extends Controller
           $err = curl_error($curl);
 
           $new_data = json_decode($response);
-          return [$new_data];
+          return [$new_data];*/
+          alert ($reference);
     }
 
 }
