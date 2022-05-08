@@ -326,14 +326,16 @@ function payWithPaystack(e) {
         type:"GET",
         //url: "{{URL::to ('verify-payment')}}/"+reference,
         url: "/verify-payment/"+response.reference,
-        /*success: function(response){
+        success: function(){
+            alert('confirm');
+        //success: function(response){
             //console.log(response);
-            if(response[0].status = true){
+            /*if(response[0].status = true){
                 $('form').prepend('<h2>${response[0].message}</h2>');
             }else{
                 $('form').prepend('<h2>failed to verify payment</h2>');
-            }
-        }*/
+            }*/
+        }
       })
     }
   });
