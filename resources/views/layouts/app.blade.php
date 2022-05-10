@@ -336,8 +336,8 @@ function payWithPaystack(e) {
         type:"GET",
         //url: "{{URL::to ('verify-payment')}}/"+reference,
         url: "/verify-payment/"+response.reference,
-        success: function(){
-            alert(<?php $comfirm ?>);
+        success: function(comfirm){
+            alert(comfirm);
         //success: function(response){
             //console.log(response);
             /*if(response[0].status = true){
