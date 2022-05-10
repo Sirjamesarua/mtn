@@ -69,7 +69,8 @@ class HomeController extends Controller
 
           $new_data = json_decode($response);
           return [$new_data];*/
-          //console.log("'correct");
+          $comfirm = "good";
+          return $comfirm;
     }
 
 }

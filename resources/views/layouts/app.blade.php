@@ -18,7 +18,7 @@
                     background-color:#FFB700;
                     font-family:serif;
                 }
-                
+
                 .border-center{
                     display:flex;
                     justify-content:center;
@@ -337,7 +337,7 @@ function payWithPaystack(e) {
         //url: "{{URL::to ('verify-payment')}}/"+reference,
         url: "/verify-payment/"+response.reference,
         success: function(){
-            alert('confirm');
+            alert(<?php $comfirm ?>);
         //success: function(response){
             //console.log(response);
             /*if(response[0].status = true){
