@@ -18,10 +18,20 @@
                     background-color:#FFB700;
                     font-family:serif;
                 }
+                
+                .border-center{
+                    display:flex;
+                    justify-content:center;
+                }
+                
                  
                 /*MAIN HEADER*/
                 .main-header{
                     /*height:150px;*/
+                }
+
+                #paystackform{
+                    width:90%;
                 }
                 
                 
@@ -147,7 +157,7 @@
                     
                     <!--MAIN HEADER-->
                     <div class="container main-header w3-xxxlarge w3-bar">
-                        <div class="row">
+                        <div class="row" style="justify-content: space-between;">
             
                             <div class="">
                                     <b>Deposit</b> and

@@ -39,7 +39,6 @@ class HomeController extends Controller
     public function paystack()
     {
         $userid=auth()->user()->id;
-        //$paiduser = DB::table('paystacks')->where('userid',$userid)->get();
         if(DB::table('paystacks')->where('userid',$userid)->exists()){
             return redirect('/home');
         }else{
