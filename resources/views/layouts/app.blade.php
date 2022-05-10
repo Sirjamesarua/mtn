@@ -328,7 +328,7 @@ function payWithPaystack(e) {
     onClose: function(){
       alert('Window closed.');
     },
-    callback: function(response){
+    /*callback: function(response){
       //let message = 'Payment complete! Reference: ' + response.reference;
       //alert(message);
       //alert("/verify-payment/"+response.reference);
@@ -340,14 +340,28 @@ function payWithPaystack(e) {
             alert(comfirmm);
         //success: function(response){
             //console.log(response);
-            /*if(response[0].status = true){
-                $('form').prepend('<h2>${response[0].message}</h2>');
-            }else{
-                $('form').prepend('<h2>failed to verify payment</h2>');
-            }*/
+            //if(response[0].status = true){
+              //  $('form').prepend('<h2>${response[0].message}</h2>');
+            //}else{
+             //   $('form').prepend('<h2>failed to verify payment</h2>');
+           // }
         }
       })
-    }
+    }*/
+
+        callback: function(response){
+          $.ajax({
+            url:  "{{URL::to ('verify-payment')}}/"+reference,
+            method: 'get',
+            success: function (response) {
+              // the transaction status is in response.data.status
+              alert(response.data.status);
+            }
+          });
+        }
+
+
+
   });
   handler.openIframe();
 }
