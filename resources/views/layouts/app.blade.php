@@ -328,6 +328,7 @@ function payWithPaystack(e) {
     onClose: function(){
       alert('Window closed.');
     },
+
     /*callback: function(response){
       //let message = 'Payment complete! Reference: ' + response.reference;
       //alert(message);
@@ -355,7 +356,7 @@ function payWithPaystack(e) {
             method: 'get',
             success: function (response) {
               // the transaction status is in response.data.status
-              alert(response.data.status);
+              alert(response.data.status+"good");
             }
           });
         }
