@@ -34,7 +34,7 @@
              <form id="paymentForm">
                   <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email-address" placeholder="<?php echo auth()->user()->email ?>" required />
+                    <input type="email" id="email-address" value="<?php echo auth()->user()->email ?>" required />
                   </div>
                   <div class="form-group">
                     <label for="amount">Amount</label>
