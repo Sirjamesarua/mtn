@@ -69,7 +69,7 @@ class HomeController extends Controller
 
           $new_data = json_decode($response);
           return [$new_data];*/
-          $comfirmm = $reference;
+          $comfirmm = reference;
           return $comfirmm;
     }
 
