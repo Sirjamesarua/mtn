@@ -100,7 +100,7 @@
                                                     <b><i>Phone Number :</i></b>
                                                     <br />
                                                     <small><i id="numbererror" class="w3-text-red"></i></small>
-                                                    <input type="number" name="number" id="loginnumber" class="form-control  @error('number') is-invalid @enderror" value="{{ old('number') }}" required autocomplete="number">
+                                                    <input type="number" name="number" id="loginnumber" class="form-control @error('number') is-invalid @enderror" value="{{ old('number') }}" required autocomplete="number">
 
                                                     @error('number')
                                                         <span class="invalid-feedback" role="alert">
