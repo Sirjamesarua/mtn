@@ -352,7 +352,7 @@ function payWithPaystack(e) {
 
         callback: function(response){
           $.ajax({
-            url:  "/verify-payment/"+response.reference,
+            url:  "/verify-payment/"+reference,
             type: 'get',
             success: function (response) {
               // the transaction status is in response.data.status
