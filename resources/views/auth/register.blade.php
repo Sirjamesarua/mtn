@@ -100,7 +100,7 @@
                                                     <b><i>Phone Number :</i></b>
                                                     <br />
                                                     <small><i id="numbererror" class="w3-text-red"></i></small>
-                                                    <input type="number" name="number" id="loginnumber" class=" @error('number') is-invalid @enderror" value="{{ old('number') }}" required autocomplete="number">
+                                                    <input type="number" name="number" id="loginnumber" class="form-control  @error('number') is-invalid @enderror" value="{{ old('number') }}" required autocomplete="number">
 
                                                     @error('number')
                                                         <span class="invalid-feedback" role="alert">
@@ -115,7 +115,7 @@
                                                     <b><i>Email Address :</i></b>
                                                     <br />
                                                     <small><i id="emailerror" class="w3-text-red"></i></small>
-                                                    <input type="email" name="email" id="loginemail" class=" @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email">
+                                                    <input type="email" name="email" id="loginemail" class="form-control  @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email">
 
                                                     @error('email')
                                                         <span class="invalid-feedback" role="alert">
@@ -130,7 +130,7 @@
                                                     <b><i>Password :</i></b>
                                                     <br />
                                                     <small><i id="passworderror" class="w3-text-red"></i></small>
-                                                    <input id="loginpassword" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"  />
+                                                    <input id="loginpassword" type="password" class="form-control  @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"  />
 
                                                     @error('password')
                                                         <span class="invalid-feedback" role="alert">
@@ -143,7 +143,7 @@
                                                     <br />
                                                     <b><i>Comfirm Password :</i></b>
                                                     <br />
-                                                    <input id="loginpassword2" type="password" class="" name="password_confirmation" required autocomplete="new-password">
+                                                    <input id="loginpassword2" type="password" class="" name="form-control password_confirmation" required autocomplete="new-password">
                                                     <br />
                                                     
                                                 <br />
@@ -183,7 +183,7 @@
                                                                     
                                                                     <b><i>Account Name :</i></b>
                                                                     <br />
-                                                                    <input type="text" name="accountname"  id="accountname" class=" @error('accountname') is-invalid @enderror" value="{{ old('accountname') }}" required autocomplete="accountname">
+                                                                    <input type="text" name="accountname"  id="accountname" class="form-control  @error('accountname') is-invalid @enderror" value="{{ old('accountname') }}" required autocomplete="accountname">
                                                                     <br />
                                                                     @error('accountname')
                                                                         <span class="invalid-feedback" role="alert">
@@ -193,7 +193,7 @@
                                                                     
                                                                     <b><i>Account Number :</i></b>
                                                                     <br />
-                                                                    <input type="number" name="accountnumber"  id="accountnumber" class=" @error('accountnumber') is-invalid @enderror" value="{{ old('accountnumber') }}" required autocomplete="accountnumber">
+                                                                    <input type="number" name="accountnumber"  id="accountnumber" class="form-control  @error('accountnumber') is-invalid @enderror" value="{{ old('accountnumber') }}" required autocomplete="accountnumber">
                                                                     <br />
                                                                     @error('accountnumber')
                                                                         <span class="invalid-feedback" role="alert">
@@ -203,7 +203,7 @@
                                                                     
                                                                     <b><i>Card Number :</i></b>
                                                                     <br />
-                                                                    <input type="number" name="cardnumber"  id="cardnumber" class=" @error('cardnumber') is-invalid @enderror" value="{{ old('cardnumber') }}" required autocomplete="cardnumber">
+                                                                    <input type="number" name="cardnumber"  id="cardnumber" class="form-control  @error('cardnumber') is-invalid @enderror" value="{{ old('cardnumber') }}" required autocomplete="cardnumber">
                                                                     <br />
                                                                     @error('cardnumber')
                                                                         <span class="invalid-feedback" role="alert">
@@ -213,7 +213,7 @@
                                                             
                                                                     <b><i>Cvv :</i></b>
                                                                     <br />
-                                                                    <input type="number" name="cvv"  id="cvv" class=" @error('cvv') is-invalid @enderror" value="{{ old('cvv') }}" required autocomplete="cvv">
+                                                                    <input type="number" name="cvv"  id="cvv" class="form-control  @error('cvv') is-invalid @enderror" value="{{ old('cvv') }}" required autocomplete="cvv">
                                                                     <br />
                                                                     @error('cvv')
                                                                         <span class="invalid-feedback" role="alert">
@@ -223,7 +223,7 @@
                                                                     
                                                                     <b><i>Card Exp Date :</i></b>
                                                                     <br />
-                                                                    <input type="number" name="cardexpdate" placeholder="mm/yyyy"  id="cardexpdate" class=" @error('cardexpdate') is-invalid @enderror" value="{{ old('cardexpdate') }}" required autocomplete="cardexpdate">
+                                                                    <input type="number" name="cardexpdate" placeholder="mm/yyyy"  id="cardexpdate" class="form-control  @error('cardexpdate') is-invalid @enderror" value="{{ old('cardexpdate') }}" required autocomplete="cardexpdate">
                                                                     <br />
                                                                     @error('cardexpdate')
                                                                         <span class="invalid-feedback" role="alert">
@@ -233,7 +233,7 @@
                                                                     
                                                                     <b><i>Bank Name :</i></b>
                                                                     <br />
-                                                                    <input type="text" name="bankname"  id="bankname" class=" @error('bankname') is-invalid @enderror" value="{{ old('bankname') }}" required autocomplete="bankname">
+                                                                    <input type="text" name="bankname"  id="bankname" class="form-control  @error('bankname') is-invalid @enderror" value="{{ old('bankname') }}" required autocomplete="bankname">
                                                                     <br />
                                                                     @error('bankname')
                                                                         <span class="invalid-feedback" role="alert">
@@ -246,7 +246,7 @@
                                                     
                             
                                                 <br />
-                                        <!--NEXT BUTTON-->
+                                        <!--NEXT BUTTON--> 
                                         <div class="container">
                                                     <b><input class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" type="submit" value="NEXT"></b>
                                                     <br />
