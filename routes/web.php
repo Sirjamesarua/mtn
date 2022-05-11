@@ -47,7 +47,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Route::get('/verify-payment/{reference}', [App\Http\Controllers\Auth\HomeController::class, 'verify']);
 
-Route::get('/verify-payment/{reference}', function(){
+Route::get('/verify-payment/{reference}', function($reference){
 	$curl = curl_init();
          $sec="sk_test_c6804e7ad469d1e972bb693b13e25018a09d3cc2";
           
