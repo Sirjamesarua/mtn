@@ -357,14 +357,14 @@ function payWithPaystack(e) {
             success: function (response) {
               // the transaction status is in response.data.status
               //alert("good"+response.status);
-                if(response.status = true){
+                if(response[0].status = true){
                     //$('form').prepend('<h2>${response[0].message}</h2>');
                     //alert("good"+ response[0]);
                     alert("good");
-                    console.log(response.data); 
+                    console.log(response[0]); 
                 }else{
                     //$('form').prepend('<h2>failed to verify payment</h2>');
-                    alert("success")
+                    alert("bad")
                 }
             }
           });

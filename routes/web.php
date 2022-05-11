@@ -67,14 +67,14 @@ Route::get('/verify-payment/{reference}', function($reference){
           
           $response = curl_exec($curl);
           $err = curl_error($curl);
-          //curl_close($curl);
+          curl_close($curl);
           
           /*if ($err) {
             echo "cURL Error #:" . $err;
           } else {
             echo $response;
           }*/
-          return $response;
-          //$new_data = json_decode($response);
-          //return $new_data;
+          //return $response;
+          $new_data = json_decode($response);
+          return $new_data;
 });
