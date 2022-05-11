@@ -361,7 +361,7 @@ function payWithPaystack(e) {
                     //$('form').prepend('<h2>${response[0].message}</h2>');
                     //alert("good"+ response[0]);
                     alert("good");
-                    console.log(response.reference); 
+                    console.log(response); 
                 }else{
                     //$('form').prepend('<h2>failed to verify payment</h2>');
                     alert("bad")
