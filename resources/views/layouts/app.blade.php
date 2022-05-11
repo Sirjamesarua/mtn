@@ -354,9 +354,9 @@ function payWithPaystack(e) {
           $.ajax({
             url:  "/verify-payment/"+response.reference,
             method: 'get',
-            success: function (response) {
+            success: function (responses) {
               // the transaction status is in response.data.status
-              alert("good"+response);
+              alert("good"+responses);
             }
           });
         }

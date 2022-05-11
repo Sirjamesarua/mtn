@@ -88,7 +88,7 @@ class HomeController extends Controller
             ),
           ));
           
-          $response = curl_exec($curl);
+          $responses = curl_exec($curl);
           $err = curl_error($curl);
           curl_close($curl);
           
@@ -97,7 +97,7 @@ class HomeController extends Controller
           } else {
             echo $response;
           }*/
-          return $response;
+          return $responses;
 
 
 
