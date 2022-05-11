@@ -45,10 +45,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get('/verify-payment/{reference}', [App\Http\Controllers\Auth\HomeController::class, 'verify']);
+Route::get('/verify-payment/{reference}', [App\Http\Controllers\Auth\HomeController::class, 'verify']);
 
-Route::get('/verify-payment/{reference}', function(){
+/*Route::get('/verify-payment/{reference}', function(){
 	echo '<script>
 		console.log("hghgh");
 	</script>';
-});
+});*/
