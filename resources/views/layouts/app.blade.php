@@ -372,48 +372,6 @@ function payWithPaystack(e) {
 
         }
 
-                callback: function(response){
-
-                        var amountpaid = $("input#amount").val();
-                        var refeerer_no = $("input#refereer-number").val();
-                        //var receiver_id = $("input#receiver_id").val();
-
-
-                        $.ajaxSetup({
-                            headers:{
-                                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content'),
-                            }
-                        });
-
-
-                        $.ajax({
-                            type:"POST",
-                            url:"/paystack/save",
-                            data:{
-                                '_token': token,
-                                amountpaid:amountpaid,
-                                refeerer_no:refeerer_no,
-                            },
-                            //data: content,
-                            dataType:"json",
-                            success:function(response){
-                                if(response.status==400){
-                                    alert("not successful");
-                                       // $('#messageform').find('#message').val(message);
-                                }else{
-                                    alert("successful");
-                                        //alert("Product reported successfully");
-                                        //alert(response.message);
-
-                                        //$('#reportproductform').hide();
-                                        //$('#messageform').find('#message').val("");
-                                }
-                            }
-                        });
-
-
-                }
-
 
 
   });
