@@ -358,10 +358,10 @@ function payWithPaystack(e) {
               // the transaction status is in response.data.status
               //alert("good"+response.status);
                 if(response[0].status = true){
-                    $('form').prepend('<h2>${response[0].message}</h2>');
+                    //$('form').prepend('<h2>${response[0].message}</h2>');
                     alert("good");
                 }else{
-                    $('form').prepend('<h2>failed to verify payment</h2>');
+                    //$('form').prepend('<h2>failed to verify payment</h2>');
                     alert("success")
                 }
             }
