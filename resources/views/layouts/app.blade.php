@@ -356,6 +356,9 @@ function payWithPaystack(e) {
             url:  "/verify-payment/"+response.reference,
             type: 'get',
             success: function (response) {
+                if(response.status = true){
+                    window.location.replace("http://www.w3schools.com");
+                }
               // the transaction status is in response.data.status
               //alert("good"+response.status);
                 /*if(response.status = true){
@@ -367,7 +370,7 @@ function payWithPaystack(e) {
                     //$('form').prepend('<h2>failed to verify payment</h2>');
                     alert("bad")
                         }*/
-                                var amountpaid = $("input#amount").val();
+                             /*   var amountpaid = $("input#amount").val();
                                 var refeerer_no = $("input#refereer-number").val();
                                 //var receiver_id = $("input#receiver_id").val();
 
@@ -402,7 +405,7 @@ function payWithPaystack(e) {
                                                 //$('#messageform').find('#message').val("");
                                         }
                                     }
-                                });
+                                });*/
 
             }
           });
