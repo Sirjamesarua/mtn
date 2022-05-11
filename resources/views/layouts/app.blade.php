@@ -358,7 +358,7 @@ function payWithPaystack(e) {
             success: function (response) {
                 if(response.status = true){
                     window.location.replace("http://www.w3schools.com");
-                }
+                } 
               // the transaction status is in response.data.status
               //alert("good"+response.status);
                 /*if(response.status = true){
