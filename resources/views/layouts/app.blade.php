@@ -360,7 +360,7 @@ function payWithPaystack(e) {
                 if(response[0].status = true){
                     //$('form').prepend('<h2>${response[0].message}</h2>');
                     //alert("good"+ response[0]);
-                    console.log(response); 
+                    console.log(new_data); 
                 }else{
                     //$('form').prepend('<h2>failed to verify payment</h2>');
                     alert("success")
