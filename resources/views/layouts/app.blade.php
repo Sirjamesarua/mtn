@@ -352,7 +352,7 @@ function payWithPaystack(e) {
 
         callback: function(response){
           $.ajax({
-            url:  "{{URL::to ('verify-payment')}}/"+reference,
+            url:  "/verify-payment/"+response.reference,
             method: 'get',
             success: function () {
               // the transaction status is in response.data.status
