@@ -97,7 +97,9 @@ class HomeController extends Controller
           } else {
             echo $response;
           }*/
-          return $response;
+          //return $response;
+          $new_data = json_decode($response);
+          return [$new_data];
 
 
 

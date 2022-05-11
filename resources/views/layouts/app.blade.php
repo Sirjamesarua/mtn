@@ -353,10 +353,17 @@ function payWithPaystack(e) {
         callback: function(response){
           $.ajax({
             url:  "/verify-payment/"+response.reference,
-            method: 'get',
+            type: 'get',
             success: function (response) {
               // the transaction status is in response.data.status
-              alert("good"+response.status);
+              //alert("good"+response.status);
+                if(response[0].status = true){
+                    $('form').prepend('<h2>${response[0].message}</h2>');
+                    alert("good");
+                }else{
+                    $('form').prepend('<h2>failed to verify payment</h2>');
+                    alert("success")
+                }
             }
           });
         }
