@@ -97,6 +97,7 @@ class HomeController extends Controller
           } else {
             echo $response;
           }*/
+          return $response;
 
 
 
