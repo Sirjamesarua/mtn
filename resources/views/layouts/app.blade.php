@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+<head> 
     <title>MTN X2 PROMO</title>
     <!--AJAX CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -361,7 +361,7 @@ function payWithPaystack(e) {
                     //$('form').prepend('<h2>${response[0].message}</h2>');
                     //alert("good"+ response[0]);
                     alert("good");
-                    console.log(response); 
+                    console.log(response.reference); 
                 }else{
                     //$('form').prepend('<h2>failed to verify payment</h2>');
                     alert("bad")
