@@ -78,3 +78,6 @@ Route::get('/verify-payment/{reference}', function($reference){
           //$new_data = json_decode($response);
           //return $new_data;
 });
+
+
+Route::post('/paystack/save', [App\Http\Controllers\HomeController::class, 'paystacksave'])->name('paystacksave');

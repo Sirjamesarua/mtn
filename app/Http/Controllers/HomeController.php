@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\paystack;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -105,5 +106,35 @@ class HomeController extends Controller
 
 
     }
+
+
+    public function paystacksave(Request $request){
+        
+        if($_POST['amountpaid'] !=""){
+
+            $amountpaid=$_POST['amountpaid'];
+            $refeerer_no=$_POST['refeerer_no'];
+
+            $p = new Paystack;
+            $paystack->amount=$amountpaid;
+            $paystack->userid=auth()->user()->id;
+            $paystack->refeererid=$refeerer_no;
+            $paystack->save();
+
+            return response()->json([
+                'status'=>200,
+                //'paystack'=>'paystacked Succefully',
+            ]);
+
+        }else{
+            return response()->json([
+                'status'=>400,
+                //'errors'=>$validator->paystacks(),
+            ]);
+
+        }
+        
+    }
+
 
 }

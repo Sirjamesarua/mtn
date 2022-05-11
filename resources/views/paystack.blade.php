@@ -31,14 +31,17 @@
         <div id="paystackform" class="register-container w3-center w3-xxxlarge w3-white w3-border-xlarge">
         <br />
 
-             <form id="paymentForm">
+             <form id="paymentForm" method="POST" action="javascript:void(0);" enctype="multipart/Form-data">
+                  {{method_Field('POST')}}
+                  @csrf
+                  
                   <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email-address" value="<?php echo auth()->user()->email ?>" required />
                   </div>
                   <div class="form-group">
                     <label for="amount">Amount</label>
-                    <input type="tel" id="amount" required />
+                    <input type="tel" id="amount" name="amountpaid" required />
                   </div>
                   <div class="form-group">
                     <label for="first-name">First Name</label>
