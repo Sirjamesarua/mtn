@@ -370,15 +370,7 @@ function payWithPaystack(e) {
             }
           });
 
-        }
-
-
-
-
-
-
-        callback: function(response){
-                        var amountpaid = $("input#amount").val();
+          var amountpaid = $("input#amount").val();
                         var refeerer_no = $("input#refereer-number").val();
                         //var receiver_id = $("input#receiver_id").val();
 
@@ -414,7 +406,13 @@ function payWithPaystack(e) {
                                 }
                             }
                         });
+
         }
+
+
+
+
+
 
 
 
