@@ -35,7 +35,6 @@
                   {{method_Field('POST')}}
                   @csrf
 
-                    <div id="paystackform2">
                             <div class="form-group">
                               <label for="email">Email Address</label>
                               <input type="email" id="email-address" value="<?php echo auth()->user()->email ?>" required />
@@ -60,11 +59,6 @@
                             <div class="form-submit">
                               <button type="submit" class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" onclick="payWithPaystack(event)" style="width: 40%;"> Pay </button>
                             </div>
-                    </div>
-                    <br />
-                    <div id="paystackbtn">
-                      <button id="paystackbtn" type="submit" class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" onclick="" style="width: 40%;"> NEXT </button>
-                    </div>
 
 
 

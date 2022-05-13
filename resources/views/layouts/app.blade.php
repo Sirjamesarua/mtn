@@ -363,31 +363,8 @@ function payWithPaystack(e) {
             url:  "/verify-payment/"+response.reference,
             type: 'get',
             success: function (response) {
-                var paymentForm= document.getElementById("paymentForm");
-                var paystackform= document.getElementById("paystackform");
-                var paystackform2= document.getElementById("paystackform2");
-                var paystackbtn= document.getElementById("paystackbtn");
                 if(response.status = true){
-                    //paystackform2.style.display="none";
-                    paymentForm.action="{{route('paystacksave')}}";
-                    document.getElementById("paystackbtn").style.display="block";
-
-                    const myelement = (
-                      <table>
-                        <tr>
-                          <th>Name</th>
-                        </tr>
-                        <tr>
-                          <td>John</td>
-                        </tr>
-                        <tr>
-                          <td>Elsa</td>
-                        </tr>
-                      </table>
-                    );
-
-                    ReactDOM.render(myelement, document.getElementById('paystackform2'));
-
+                    window.location.replace("/paystack/save");
                 } else{
                     aler("payment not successful");
                 }
