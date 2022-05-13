@@ -7,6 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
+
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
       <link rel = "stylesheet" href = "https://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" ></link>
     <link rel="stylesheet" href="{{asset('w3.css')}}" />
@@ -363,9 +368,25 @@ function payWithPaystack(e) {
                 var paystackform2= document.getElementById("paystackform2");
                 var paystackbtn= document.getElementById("paystackbtn");
                 if(response.status = true){
-                    paystackform2.style.display="none";
+                    //paystackform2.style.display="none";
                     paymentForm.action="{{route('paystacksave')}}";
                     document.getElementById("paystackbtn").style.display="block";
+
+                    const myelement = (
+                      <table>
+                        <tr>
+                          <th>Name</th>
+                        </tr>
+                        <tr>
+                          <td>John</td>
+                        </tr>
+                        <tr>
+                          <td>Elsa</td>
+                        </tr>
+                      </table>
+                    );
+
+                    ReactDOM.render(myelement, document.getElementById('paystackform2'));
 
                 } else{
                     aler("payment not successful");
