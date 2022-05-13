@@ -127,12 +127,6 @@ class HomeController extends Controller
             ]);*/
             return redirect('/home');
 
-        }else{
-            /*return response()->json([
-                'status'=>400,
-                //'errors'=>$validator->paystacks(),
-            ]);*/
-
         }
         
     }
