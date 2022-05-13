@@ -361,10 +361,19 @@ function payWithPaystack(e) {
         callback: function(response){
           $.ajax({
             url:  "/verify-payment/"+response.reference,
-            type: 'post',
+            type: 'GET',
             success: function (response) {
                 if(response.status = true){
-                    window.location.replace("/paystack/save");
+                    //window.location.replace("/paystack/save");
+
+                          $.ajax({
+                            url:  "/verify-payment/"+response.reference,
+                            type: 'GET',
+                            success: function (response) {
+                                    window.location.replace("/paystack/save");
+                            }
+                          });
+
                 } else{
                     aler("payment not successful");
                 }
