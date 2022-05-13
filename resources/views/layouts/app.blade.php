@@ -107,9 +107,7 @@
                         display: none;
                     }
 
-                    #paystackbtn{
-                        display: none;
-                    }
+                    
                 
       </style>
 </head>
