@@ -62,9 +62,6 @@
                             </div>
                     </div>
                     <br />
-                    <div id="paystackbtn">
-                      <button id="paystackbtn" type="submit" class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" onclick="" style="width: 40%;"> NEXT </button>
-                    </div>
 
 
 

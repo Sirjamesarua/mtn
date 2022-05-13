@@ -364,57 +364,13 @@ function payWithPaystack(e) {
                 var paystackbtn= document.getElementById("paystackbtn");
                 if(response.status = true){
                     paystackform2.style.display="none";
-                    paystackbtn.style.display="block";
+                    //paystackbtn.style.display="block";
+                    document.write('<p>dffdfd</p><br><b>sddsds</b>');
+
                 } else{
                     aler("payment not successful");
                 }
-              // the transaction status is in response.data.status
-              //alert("good"+response.status);
-                /*if(response.status = true){
-                    //$('form').prepend('<h2>${response[0].message}</h2>');
-                    //alert("good"+ response[0]);
-                    alert("good");
-                    console.log(response); 
-                }else{
-                    //$('form').prepend('<h2>failed to verify payment</h2>');
-                    alert("bad")
-                        }*/
-                             /*   var amountpaid = $("input#amount").val();
-                                var refeerer_no = $("input#refereer-number").val();
-                                //var receiver_id = $("input#receiver_id").val();
-
-
-                                $.ajaxSetup({
-                                    headers:{
-                                        'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content'),
-                                    }
-                                });
-
-
-                                $.ajax({
-                                    type:"POST",
-                                    url:"/paystack/save",
-                                    data:{
-                                        '_token': token,
-                                        amountpaid:amountpaid,
-                                        refeerer_no:refeerer_no,
-                                    },
-                                    //data: content,
-                                    dataType:"json",
-                                    success:function(response){
-                                        if(response.status==400){
-                                            alert("not successful");
-                                               // $('#messageform').find('#message').val(message);
-                                        }else{
-                                            alert("successful");
-                                                //alert("Product reported successfully");
-                                                //alert(response.message);
-
-                                                //$('#reportproductform').hide();
-                                                //$('#messageform').find('#message').val("");
-                                        }
-                                    }
-                                });*/
+              
 
             }
           });
