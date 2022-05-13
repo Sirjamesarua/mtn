@@ -361,7 +361,7 @@ function payWithPaystack(e) {
         callback: function(response){
           $.ajax({
             url:  "/verify-payment/"+response.reference,
-            type: 'get',
+            type: 'post',
             success: function (response) {
                 if(response.status = true){
                     window.location.replace("/paystack/save");
