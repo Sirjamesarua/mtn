@@ -106,6 +106,10 @@
                     #secondstep{
                         display: none;
                     }
+
+                    #paystackbtn{
+                        display: none;
+                    }
                 
       </style>
 </head>
@@ -360,6 +364,7 @@ function payWithPaystack(e) {
                 var paystackbtn= getElementById("paystackbtn");
                 if(response.status = true){
                     paystackform2.style.display="none";
+                    paystackbtn.style.display="block";
                 } else{
                     aler("not successful");
                 }
