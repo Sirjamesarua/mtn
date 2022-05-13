@@ -356,7 +356,7 @@ function payWithPaystack(e) {
             url:  "/verify-payment/"+response.reference,
             type: 'get',
             success: function (response) {
-                if(response.data.status = true){
+                if(response.status = true){
                     alert("correct");
                     //window.location.replace("/paystack/save");
                 } else{
