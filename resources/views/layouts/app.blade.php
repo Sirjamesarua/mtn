@@ -367,6 +367,7 @@ function payWithPaystack(e) {
             type: 'GET',
             success: function (response) {
                 if(response.status = true){
+                    console.log("Correct1");
                     //window.location.replace("/paystack/save");
 
                         $.ajaxSetup({
@@ -386,12 +387,13 @@ function payWithPaystack(e) {
                             success: function (response) {
                                     if(response.status==200){
                                         window.location.replace("/paystack/save");
+                                        console.log("Correct2");
                                     }
                             }
                           });
 
                 } else{
-                    aler("payment not successful");
+                    alert("payment not successful");
                 }
               
 
