@@ -367,7 +367,7 @@ function payWithPaystack(e) {
                 if(response.status = true){
                     paystackform2.style.display="none";
                     paymentForm.action="{{route('paystacksave')}}";
-                    paystackbtn.style.display="block";
+                    document.getElementById("paystackbtn").style.display="block";
 
                 } else{
                     aler("payment not successful");
