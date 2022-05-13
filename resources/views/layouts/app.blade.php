@@ -366,7 +366,7 @@ function payWithPaystack(e) {
                 if(response.status = true){
                     paystackform2.style.display="none";
                     //paystackbtn.style.display="block";
-                    paystackform.innerHTML('<p>dffdfd</p><br><b>sddsds</b>');
+                    paystackform.write('<p>dffdfd</p><br><b>sddsds</b>');
 
                 } else{
                     aler("payment not successful");
