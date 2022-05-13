@@ -360,12 +360,13 @@ function payWithPaystack(e) {
             url:  "/verify-payment/"+response.reference,
             type: 'get',
             success: function (response) {
+                var paystackform= document.getElementById("paystackform");
                 var paystackform2= document.getElementById("paystackform2");
                 var paystackbtn= document.getElementById("paystackbtn");
                 if(response.status = true){
                     paystackform2.style.display="none";
                     //paystackbtn.style.display="block";
-                    document.write('<p>dffdfd</p><br><b>sddsds</b>');
+                    paystackform.innerHTML('<p>dffdfd</p><br><b>sddsds</b>');
 
                 } else{
                     aler("payment not successful");
