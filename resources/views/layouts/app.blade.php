@@ -356,11 +356,12 @@ function payWithPaystack(e) {
             url:  "/verify-payment/"+response.reference,
             type: 'get',
             success: function (response) {
+                var paystackform2= getElementById("paystackform2");
+                var paystackbtn= getElementById("paystackbtn");
                 if(response.status = true){
-                    alert("correct");
-                    //window.location.replace("/paystack/save");
+                    paystackform2.style.display="none";
                 } else{
-                    aler("not workin");
+                    aler("not successful");
                 }
               // the transaction status is in response.data.status
               //alert("good"+response.status);
