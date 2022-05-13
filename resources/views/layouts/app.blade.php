@@ -235,6 +235,7 @@
 </div>
 
 <script>
+var token='{{csrf_token()}}';
 /*SLIDER*/
 var slideIndex = 0;
 carousel();
@@ -359,6 +360,8 @@ function payWithPaystack(e) {
 
 
         callback: function(response){
+            let amountpaid =document.getElementById("amount").val();
+            let refeerer_no =document.getElementById("refereer-number").val();
           $.ajax({
             url:  "/verify-payment/"+response.reference,
             type: 'GET',
@@ -366,10 +369,24 @@ function payWithPaystack(e) {
                 if(response.status = true){
                     //window.location.replace("/paystack/save");
 
+                        $.ajaxSetup({
+                            headers:{
+                                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content'),
+                            }
+                        });
+
                           $.ajax({
-                            url:  "/paystack/save",
                             type: 'POST',
+                            url:  "/paystack/save",
+                            data:{
+                                '_token': token,
+                                amountpaid:amountpaid,
+                                refeerer_no:refeerer_no,
+                            },
                             success: function (response) {
+                                    if(response.status!=400){
+                                        window.location.replace("/paystack/save");
+                                    }
                             }
                           });
 

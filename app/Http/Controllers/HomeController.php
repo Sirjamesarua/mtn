@@ -121,15 +121,23 @@ class HomeController extends Controller
             $paystack->refeererid=$refeerer_no;
             $paystack->save();
 
-            /*return response()->json([
+            return response()->json([
                 'status'=>200,
-                //'paystack'=>'paystacked Succefully',
-            ]);*/
-            return redirect('/home');
+                //'message'=>'messageed Succefully',
+            ]);
+
+        }else{
+            return response()->json([
+                'status'=>400,
+                //'errors'=>$validator->messages(),
+            ]);
 
         }
         
     }
+
+
+    
 
 
 }
