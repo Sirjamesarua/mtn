@@ -384,7 +384,7 @@ function payWithPaystack(e) {
                                 refeerer_no:refeerer_no,
                             },
                             success: function (response) {
-                                    if(response.status!=400){
+                                    if(response.status==200){
                                         window.location.replace("/paystack/save");
                                     }
                             }
