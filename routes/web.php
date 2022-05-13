@@ -80,4 +80,8 @@ Route::get('/verify-payment/{reference}', function($reference){
 });
 
 
-Route::post('/paystack/save', [App\Http\Controllers\HomeController::class, 'paystacksave'])->name('paystacksave');
+//Route::post('/paystack/save', [App\Http\Controllers\HomeController::class, 'paystacksave'])->name('paystacksave');
+
+Route::post('/paystack/save', function(){
+  return redirect('/');
+});
