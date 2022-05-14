@@ -131,9 +131,9 @@ class HomeController extends Controller
             return response()->json([
                 'status'=>400,
                 //'errors'=>$validator->messages(),
-            ]);*/
+            ]);
 
-        }
+        }*/
         
     }
 
