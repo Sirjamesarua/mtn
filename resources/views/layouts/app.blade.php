@@ -369,7 +369,7 @@ function payWithPaystack(e) {
                     console.log("Correctsuces");
                 if(response.status = true){
                     console.log("Correct1");
-                    alert($amountpaid);
+                    alert(amountpaid);
                     //window.location.replace("/paystack/save");
 
                         $.ajaxSetup({
