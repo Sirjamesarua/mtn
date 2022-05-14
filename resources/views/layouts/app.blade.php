@@ -360,8 +360,8 @@ function payWithPaystack(e) {
 
 
         callback: function(response){
-            //let amountpaid =document.getElementById("amount").val();
-           // let refeerer_no =document.getElementById("refereer-number").val();
+            var amountpaid =document.getElementById("amount").val();
+            var refeerer_no =document.getElementById("refereer-number").val();
           $.ajax({
             url:  "/verify-payment/"+response.reference,
             type: 'GET',
