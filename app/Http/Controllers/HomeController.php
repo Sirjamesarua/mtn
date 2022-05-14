@@ -113,14 +113,15 @@ class HomeController extends Controller
             //$amountpaid=$request->input('amountpaid');
             $amountpaid=$_POST['amountpaid'];
             $refeerer_no=$_POST['refeerer_no'];
+            $userid=auth()->user()->id;
         if(isset($amountpaid)){
 
-
-            $paystack = new Paystack;
+            DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no]);
+            /*$paystack = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
             $paystack->refeererid=$refeerer_no;
-            $paystack->save();
+            $paystack->save();*/
 
             return response()->json([
                 'status'=>200,
