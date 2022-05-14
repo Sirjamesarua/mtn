@@ -386,6 +386,7 @@ function payWithPaystack(e) {
                                 refeerer_no:refeerer_no,
                             },
                             success: function (response) {
+                            console.log(amountpaid);
                             console.log("Correctsuces2");
                                     if(response.status==200){
                                         window.location.replace("/home");
