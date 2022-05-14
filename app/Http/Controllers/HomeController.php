@@ -116,7 +116,7 @@ class HomeController extends Controller
         if(isset($amountpaid)){
 
 
-            $p = new Paystack;
+            $paystack = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
             $paystack->refeererid=$refeerer_no;
