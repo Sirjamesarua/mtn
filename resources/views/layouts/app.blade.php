@@ -386,12 +386,14 @@ function payWithPaystack(e) {
                                 refeerer_no:refeerer_no,
                             },
                             success: function (response) {
+                            console.log("Correctsuces2");
                                     if(response.status==200){
                                         window.location.replace("/paystack/save");
                                         console.log("Correct2");
                                     }
                             }
                           });
+                    console.log("endCorrectsuces");
 
                 } else{
                     alert("payment not successful");
