@@ -120,7 +120,7 @@ class HomeController extends Controller
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
             $paystack->refeererid=$refeerer_no;
-            $paystack->save();*/
+            $paystack->save();
 
             return response()->json([
                 'status'=>200,
