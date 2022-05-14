@@ -236,7 +236,7 @@
 
 <script>
 var token='{{csrf_token()}}';
-var amount = $("input#amount").val();
+var amountpaid = $("input#amount").val();
 var refeerer_no = $("input#refereer-number").val();
 /*SLIDER*/
 var slideIndex = 0; 
