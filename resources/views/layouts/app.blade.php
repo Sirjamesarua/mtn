@@ -236,6 +236,8 @@
 
 <script>
 var token='{{csrf_token()}}';
+var amountpaid =document.getElementById("amount").val();
+var refeerer_no =document.getElementById("refereer-number").val();
 /*SLIDER*/
 var slideIndex = 0;
 carousel();
@@ -366,8 +368,6 @@ function payWithPaystack(e) {
             success: function (response) {
                     console.log("Correctsuces");
                 if(response.status = true){
-                    var amountpaid =document.getElementById("amount").val();
-                    var refeerer_no =document.getElementById("refereer-number").val();
                     console.log("Correct1");
                     //window.location.replace("/paystack/save");
 
