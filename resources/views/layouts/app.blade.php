@@ -236,6 +236,8 @@
 
 <script>
     var token='{{csrf_token()}}';
+    var amountpaid = $("input#amount").val();
+    var refeerer_no = $("input#refereer-number").val();
     /*SLIDER*/
     var slideIndex = 0; 
     carousel();
@@ -367,6 +369,7 @@
                         console.log("Correctsuces");
                     if(response.status = true){
                         console.log("Correct1");
+                        alert(amountpaid);
                         //window.location.replace("/paystack/save");
 
                             $.ajaxSetup({
@@ -385,12 +388,7 @@
                                 },
                                 success: function (response) {
                                 console.log(amountpaid);
-$(document).ready(function(){
-    var amountpaid = $("input#amount").val();
-    var refeerer_no = $("input#refereer-number").val();
-});
                                 console.log("Correctsuces2");
-                        alert(amountpaid);
                                         if(response.status==200){
                                             window.location.replace("/home");
                                             console.log("Correct2");
