@@ -365,7 +365,6 @@ function payWithPaystack(e) {
           $.ajax({
             url:  "/verify-payment/"+response.reference,
             type: 'GET',
-                    console.log("b3Correct1");
             success: function (response) {
                     console.log("Correctsuces");
                 if(response.status = true){
