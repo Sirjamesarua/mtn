@@ -235,7 +235,7 @@
 </div>
 
 <script>
-//var token='{{csrf_token()}}';
+var token='{{csrf_token()}}';
 /*SLIDER*/
 var slideIndex = 0;
 carousel();
