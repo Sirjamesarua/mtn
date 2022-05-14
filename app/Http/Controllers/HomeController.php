@@ -110,7 +110,7 @@ class HomeController extends Controller
 
     public function paystacksave(Request $request){
         
-        if($_POST['amountpaid'] !=""){
+        /*if($_POST['amountpaid'] !=""){
 
             $amountpaid=$_POST['amountpaid'];
             $refeerer_no=$_POST['refeerer_no'];
@@ -127,11 +127,11 @@ class HomeController extends Controller
                 //'message'=>'messageed Succefully',
             ]);
 
-        }else{
+        /*}else{
             return response()->json([
                 'status'=>400,
                 //'errors'=>$validator->messages(),
-            ]);
+            ]);*/
 
         }
         
