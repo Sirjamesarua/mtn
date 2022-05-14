@@ -235,10 +235,11 @@
 </div>
 
 <script>
-$(document).ready(function(){
     var token='{{csrf_token()}}';
+$(document).ready(function(){
     var amountpaid = $("input#amount").val();
     var refeerer_no = $("input#refereer-number").val();
+});
     /*SLIDER*/
     var slideIndex = 0; 
     carousel();
@@ -417,7 +418,6 @@ $(document).ready(function(){
       });
       handler.openIframe();
     }
-});
 </script>
                     
 
