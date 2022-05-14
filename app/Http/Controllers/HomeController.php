@@ -112,13 +112,11 @@ class HomeController extends Controller
         
             //$amountpaid=$request->input('amountpaid');
             $amountpaid=$_POST['amountpaid'];
+            $refeerer_no=$_POST['refeerer_no'];
         if(isset($amountpaid)){
 
-            /*$amountpaid=$_POST['amountpaid'];
-            $refeerer_no=$_POST['refeerer_no'];
-            //$request->input('name');
 
-            /*$p = new Paystack;
+            $p = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
             $paystack->refeererid=$refeerer_no;
@@ -129,11 +127,11 @@ class HomeController extends Controller
                 //'message'=>'messageed Succefully',
             ]);
 
-        /*}else{
+        }else{
             return response()->json([
                 'status'=>400,
                 //'errors'=>$validator->messages(),
-            ]);*/
+            ]);
 
         }
         
