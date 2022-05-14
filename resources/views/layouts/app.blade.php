@@ -360,13 +360,6 @@ function payWithPaystack(e) {
 
 
         callback: function(response){
-            
-                        $.ajaxSetup({
-                            headers:{
-                                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content'),
-                            }
-                        });
-
             let amountpaid =document.getElementById("amount").val();
             let refeerer_no =document.getElementById("refereer-number").val();
           $.ajax({
@@ -377,6 +370,12 @@ function payWithPaystack(e) {
                 if(response.status = true){
                     console.log("Correct1");
                     //window.location.replace("/paystack/save");
+
+                        /*$.ajaxSetup({
+                            headers:{
+                                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content'),
+                            }
+                        });
 
                           $.ajax({
                             type: 'POST',
@@ -392,7 +391,7 @@ function payWithPaystack(e) {
                                         console.log("Correct2");
                                     }
                             }
-                          });
+                          });*/
 
                 } else{
                     alert("payment not successful");
