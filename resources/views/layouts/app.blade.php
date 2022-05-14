@@ -390,6 +390,7 @@ function payWithPaystack(e) {
                                     if(response.status==200){
                                         window.location.replace("/home");
                                         console.log("Correct2");
+                                        console.log(response.amount);
                                     }
                             }
                           });
