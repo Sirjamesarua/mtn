@@ -110,7 +110,8 @@ class HomeController extends Controller
 
     public function paystacksave(Request $request){
         
-            $amountpaid=$request->input('amountpaid');
+            //$amountpaid=$request->input('amountpaid');
+            $amountpaid=$_POST['amountpaid'];
         if(isset($amountpaid)){
 
             /*$amountpaid=$_POST['amountpaid'];
