@@ -114,12 +114,13 @@ class HomeController extends Controller
 
             $amountpaid=$_POST['amountpaid'];
             $refeerer_no=$_POST['refeerer_no'];
+            //$request->input('name');
 
-            $p = new Paystack;
+            /*$p = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
             $paystack->refeererid=$refeerer_no;
-            $paystack->save();
+            $paystack->save();*/
 
             return response()->json([
                 'status'=>200,
