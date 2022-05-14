@@ -388,7 +388,7 @@ function payWithPaystack(e) {
                             success: function (response) {
                             console.log("Correctsuces2");
                                     if(response.status==200){
-                                        window.location.replace("/paystack/save");
+                                        //window.location.replace("/home");
                                         console.log("Correct2");
                                     }
                             }
