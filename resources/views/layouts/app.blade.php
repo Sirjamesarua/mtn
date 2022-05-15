@@ -236,8 +236,6 @@
 
 <script>
     var token='{{csrf_token()}}';
-    var amountpaid = $("input.amountpaid").val();
-    var refeerer_no = $("input#refereer-number").val();
     /*SLIDER*/
     var slideIndex = 0; 
     carousel();
@@ -328,10 +326,8 @@
 
 
 $(document).ready(function(){
-    alert(amountpaid);
-});
-
-
+    var amountpaid = $("input.amountpaid").val();
+    var refeerer_no = $("input#refereer-number").val();
 
     //paystack
     const paymentForm = document.getElementById('paymentForm');
@@ -425,6 +421,9 @@ $(document).ready(function(){
       });
       handler.openIframe();
     }
+
+
+});
 </script>
                     
 
