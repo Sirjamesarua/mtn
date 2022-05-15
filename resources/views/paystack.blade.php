@@ -82,18 +82,15 @@
     var token='{{csrf_token()}}';
               
 
+
+            //paystack
+            const paymentForm = document.getElementById('paymentForm');
+            paymentForm.addEventListener("submit", payWithPaystack, false);
             function payWithPaystack(e) {
               e.preventDefault();
                 var amountpaid = $("input#amount").val();
                 var refeerer_no = $("input#refereer-number").val();
                 alert(amountpaid);
-            }
-
-            //paystack
-            /*const paymentForm = document.getElementById('paymentForm');
-            paymentForm.addEventListener("submit", payWithPaystack, false);
-            function payWithPaystack(e) {
-              e.preventDefault();
               let handler = PaystackPop.setup({
                 key: 'pk_test_6fa4bde5ef3fed310ae776d4ea59b9e3e8b203a4', // Replace with your public key
                 email: document.getElementById("email-address").value,
@@ -114,7 +111,7 @@
                             if(response.status = true){
                                 console.log("Correct1");
                                 alert(amountpaid);
-                                //window.location.replace("/paystack/save");
+                                window.location.replace("/paystack/save");
 
                                     $.ajaxSetup({
                                         headers:{
@@ -159,7 +156,7 @@
 
               });
               handler.openIframe();
-            }*/
+            }
 
 
     </script>
