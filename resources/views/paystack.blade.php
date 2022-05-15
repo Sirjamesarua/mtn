@@ -111,7 +111,7 @@
                             if(response.status = true){
                                 console.log("Correct1");
                                 alert(amountpaid);
-                                window.location.replace("/paystack/save");
+                                //window.location.replace("/paystack/save");
 
                                     $.ajaxSetup({
                                         headers:{
