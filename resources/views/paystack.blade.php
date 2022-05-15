@@ -31,7 +31,8 @@
         <div id="paystackform" class="register-container w3-center w3-xxxlarge w3-white w3-border-xlarge">
         <br />
 
-             <form id="paymentForm" method="POST" action="javascript:void(0);" enctype="multipart/Form-data">
+             <!--<form id="paymentForm" method="POST" action="javascript:void(0);" enctype="multipart/Form-data">-->
+              <form action="javascript:void(0);" enctype="multipart/Form-data">
                   {{method_Field('POST')}}
                   @csrf
 
@@ -86,6 +87,11 @@
             var refeerer_no = $("input#refereer-number").val();
             alert(amountpaid);
 
+            function payWithPaystack(e) {
+              e.preventDefault();
+            alert(amountpaid);
+
+            }
 
             //paystack
             /*const paymentForm = document.getElementById('paymentForm');
@@ -161,13 +167,6 @@
 
 
         });
-
-        
-            function payWithPaystack(e) {
-              e.preventDefault();
-            alert(amountpaid);
-
-            }
     </script>
 
 
