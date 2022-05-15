@@ -86,11 +86,6 @@
             var refeerer_no = $("input#refereer-number").val();
             alert(amountpaid);
 
-            function payWithPaystack(e) {
-              e.preventDefault();
-            alert(amountpaid);
-
-            }
 
             //paystack
             /*const paymentForm = document.getElementById('paymentForm');
@@ -166,6 +161,13 @@
 
 
         });
+
+        
+            function payWithPaystack(e) {
+              e.preventDefault();
+            alert(amountpaid);
+
+            }
     </script>
 
 
