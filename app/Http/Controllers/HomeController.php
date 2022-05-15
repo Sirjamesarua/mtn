@@ -114,9 +114,17 @@ class HomeController extends Controller
             $amountpaid=$_POST['amountpaid'];
             $refeerer_no=$_POST['refeerer_no'];
             $userid=auth()->user()->id;
+
+
+          //$usersdb = DB::table('users')->where('userid',$userid)->get();
+          $refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
+          if($refeerer_no2 == ""){
+            $refeerer_no2=NULL;
+          }
+
         if($amountpaid != ""){
 
-            DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, "1"]);
+            DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no2]);
             /*$paystack = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
