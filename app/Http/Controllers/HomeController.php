@@ -126,7 +126,7 @@ class HomeController extends Controller
             return response()->json([
                 'status'=>200,
                 'amount'=>$amountpaid,
-            ]);
+            ]); 
 
         }else{
             return response()->json([
