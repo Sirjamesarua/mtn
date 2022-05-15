@@ -89,6 +89,7 @@
             //paystack
             const paymentForm = document.getElementById('paymentForm');
             paymentForm.addEventListener("submit", payWithPaystack, false);
+            alert(amountpaid);
             function payWithPaystack(e) {
               e.preventDefault();
               let handler = PaystackPop.setup({
