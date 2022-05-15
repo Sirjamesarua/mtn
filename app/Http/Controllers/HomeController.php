@@ -30,7 +30,7 @@ class HomeController extends Controller
         $userid=auth()->user()->id;
         $userpaystacks = DB::table('paystacks')->where('userid',$userid)->get();
         $invites = DB::table('paystacks')->where('refeererid',$userid)->count();
-        if(DB::table('paystackss')->where('userid',$userid)->exists()){
+        if(DB::table('paystacks')->where('userid',$userid)->exists()){
             return view('home')->with('userpaystacks',$userpaystacks)->with('invites',$invites)->with('usernumber',$usernumber);
         }else{
             return redirect('/paystack');
@@ -40,7 +40,7 @@ class HomeController extends Controller
     public function paystack()
     {
         $userid=auth()->user()->id;
-        if(DB::table('paystackss')->where('userid',$userid)->exists()){
+        if(DB::table('paystacks')->where('userid',$userid)->exists()){
             return redirect('/home');
         }else{
             return view('paystack');
@@ -114,9 +114,9 @@ class HomeController extends Controller
             $amountpaid=$_POST['amountpaid'];
             $refeerer_no=$_POST['refeerer_no'];
             $userid=auth()->user()->id;
-        if(isset($amountpaid)){
+        if($amountpaid != ""){
 
-            //DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no]);
+            DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no]);
             /*$paystack = new Paystack;
             $paystack->amount=$amountpaid;
             $paystack->userid=auth()->user()->id;
