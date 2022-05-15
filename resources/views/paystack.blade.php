@@ -79,17 +79,21 @@
 
 
     <script>
+    var token='{{csrf_token()}}';
               
         $(document).ready(function(){
             var amountpaid = $("input#amount").val();
             var refeerer_no = $("input#refereer-number").val();
             alert(amountpaid);
 
-                    
-            //paystack
-            const paymentForm = document.getElementById('paymentForm');
-            paymentForm.addEventListener("submit", payWithPaystack, false);
+            function payWithPaystack() {
             alert(amountpaid);
+
+            }
+
+            //paystack
+            /*const paymentForm = document.getElementById('paymentForm');
+            paymentForm.addEventListener("submit", payWithPaystack, false);
             function payWithPaystack(e) {
               e.preventDefault();
               let handler = PaystackPop.setup({
@@ -157,7 +161,7 @@
 
               });
               handler.openIframe();
-            }
+            }*/
 
 
         });
