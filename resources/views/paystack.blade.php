@@ -56,10 +56,9 @@
                               <input type="number" id="refereer-number" />
                             </div>
                             <br />
-                            <input type="submit" onclick="payWithPaystack()">hh</input>
-                            <!--<div class="form-submit">
+                            <div class="form-submit">
                               <button type="submit" class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" onclick="payWithPaystack(event)" style="width: 40%;"> Pay </button>
-                            </div>-->
+                            </div>
 
 
 
@@ -87,7 +86,8 @@
             var refeerer_no = $("input#refereer-number").val();
             alert(amountpaid);
 
-            function payWithPaystack() {
+            function payWithPaystack(e) {
+              e.preventDefault();
             alert(amountpaid);
 
             }
