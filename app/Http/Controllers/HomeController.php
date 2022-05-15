@@ -117,9 +117,11 @@ class HomeController extends Controller
 
 
           //$usersdb = DB::table('users')->where('userid',$userid)->get();
-          $refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
-          if($refeerer_no2 == ""){
+          if($refeerer_no == ""){
             $refeerer_no2=00;
+          }else{
+            $refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
+
           }
 
         if($amountpaid != ""){
