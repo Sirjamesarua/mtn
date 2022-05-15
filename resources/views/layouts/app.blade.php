@@ -340,33 +340,13 @@
           alert('Window closed.');
         },
 
-        /*callback: function(response){
-          //let message = 'Payment complete! Reference: ' + response.reference;
-          //alert(message);
-          //alert("/verify-payment/"+response.reference);
-          $.ajax({
-            type:"GET",
-            //url: "{{URL::to ('verify-payment')}}/"+reference,
-            url: "/verify-payment/"+response.reference,
-            success: function(comfirmm){
-                alert(comfirmm);
-            //success: function(response){
-                //console.log(response);
-                //if(response[0].status = true){
-                  //  $('form').prepend('<h2>${response[0].message}</h2>');
-                //}else{
-                 //   $('form').prepend('<h2>failed to verify payment</h2>');
-               // }
-            }
-          })
-        }*/
-
 
             callback: function(response){
               $.ajax({
                 url:  "/verify-payment/"+response.reference,
                 type: 'GET',
                 success: function (response) {
+                        <?php $amountpaid = $_GET['amountpaid']; ?>
                         console.log("Correctsuces");
                     if(response.status = true){
                         console.log("Correct1");

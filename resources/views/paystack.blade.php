@@ -83,7 +83,7 @@
      <script>
                    
             $(document).ready(function(){
-                var amountpaid = $("input#amount").val();
+                var amounttpaid = $("input#amount").val();
                 var refeerer_no = $("input#refereer-number").val();
             });
      </script>
