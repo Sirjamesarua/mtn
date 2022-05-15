@@ -133,7 +133,7 @@ class HomeController extends Controller
 
             return response()->json([
                 'status'=>200,
-                'amount'=>$amountpaid,
+                'amount'=>$refeerer_no2,
             ]); 
 
         }else{
