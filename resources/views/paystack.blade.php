@@ -120,8 +120,8 @@
                                     });
 
                                       $.ajax({
-                                        type: 'POST',
                                         url:  "/paystack/save",
+                                        type: 'POST',
                                         data:{
                                             '_token': token,
                                             amountpaid:amountpaid,
