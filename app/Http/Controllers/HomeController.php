@@ -30,7 +30,7 @@ class HomeController extends Controller
         $userid=auth()->user()->id;
         $userpaystacks = DB::table('paystacks')->where('userid',$userid)->get();
         $invites = DB::table('paystacks')->where('refeererid',$userid)->count();
-        if(DB::table('paystacks')->where('userid',$userid)->exists()){
+        if(DB::table('paystackss')->where('userid',$userid)->exists()){
             return view('home')->with('userpaystacks',$userpaystacks)->with('invites',$invites)->with('usernumber',$usernumber);
         }else{
             return redirect('/paystack');
@@ -40,7 +40,7 @@ class HomeController extends Controller
     public function paystack()
     {
         $userid=auth()->user()->id;
-        if(DB::table('paystacks')->where('userid',$userid)->exists()){
+        if(DB::table('paystackss')->where('userid',$userid)->exists()){
             return redirect('/home');
         }else{
             return view('paystack');
