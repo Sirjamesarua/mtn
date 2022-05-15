@@ -346,9 +346,9 @@
                 url:  "/verify-payment/"+response.reference,
                 type: 'GET',
                 success: function (response) {
-                        <?php $amountpaid = $_GET['amountpaid']; ?>
                         console.log("Correctsuces");
                     if(response.status = true){
+                        <?php $amountpaid = $_GET['amountpaid']; ?>
                         console.log("Correct1");
                         alert(amountpaid);
                         //window.location.replace("/paystack/save");
