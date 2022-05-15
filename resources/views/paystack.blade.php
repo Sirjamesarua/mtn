@@ -111,7 +111,6 @@
                             if(response.status = true){
                                 console.log("Correct1");
                                 alert(amountpaid);
-                                alert(refeerer_no);
                                 //window.location.replace("/paystack/save");
 
                                     $.ajaxSetup({

@@ -119,7 +119,7 @@ class HomeController extends Controller
           //$usersdb = DB::table('users')->where('userid',$userid)->get();
           $refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
           if($refeerer_no2 == ""){
-            $refeerer_no2=NULL;
+            $refeerer_no2=00;
           }
 
         if($amountpaid != ""){
@@ -133,7 +133,6 @@ class HomeController extends Controller
 
             return response()->json([
                 'status'=>200,
-                'amount'=>$refeerer_no2,
             ]); 
 
         }else{
