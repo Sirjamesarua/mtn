@@ -323,6 +323,10 @@
     }
 
 
+$(document).ready(function(){
+    var amountpaid = $("input#amount").val();
+    var refeerer_no = $("input#refereer-number").val();
+    alert(amountpaid);
 
 
     //paystack
@@ -348,7 +352,6 @@
                 success: function (response) {
                         console.log("Correctsuces");
                     if(response.status = true){
-                        <?php $amountpaid = $_GET['amountpaid']; ?>
                         console.log("Correct1");
                         alert(amountpaid);
                         //window.location.replace("/paystack/save");
@@ -398,6 +401,7 @@
       handler.openIframe();
     }
 
+});
 
 </script>
                     

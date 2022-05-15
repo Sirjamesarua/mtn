@@ -80,12 +80,5 @@
 
 
 
-     <script>
-                   
-            $(document).ready(function(){
-                var amounttpaid = $("input#amount").val();
-                var refeerer_no = $("input#refereer-number").val();
-            });
-     </script>
 
     @endsection
