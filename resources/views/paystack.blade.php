@@ -56,7 +56,7 @@
                               <input type="number" id="refereer-number" />
                             </div>
                             <br />
-                            <button onclick="payWithPaystack()">hh</button>
+                            <input type="submit" onclick="payWithPaystack()">hh</input>
                             <!--<div class="form-submit">
                               <button type="submit" class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo" onclick="payWithPaystack(event)" style="width: 40%;"> Pay </button>
                             </div>-->
