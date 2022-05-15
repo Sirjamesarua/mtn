@@ -325,10 +325,6 @@
 
 
 
-$(document).ready(function(){
-    var amountpaid = $("input.amountpaid").val();
-    var refeerer_no = $("input#refereer-number").val();
-
     //paystack
     const paymentForm = document.getElementById('paymentForm');
     paymentForm.addEventListener("submit", payWithPaystack, false);
@@ -423,7 +419,6 @@ $(document).ready(function(){
     }
 
 
-});
 </script>
                     
 
