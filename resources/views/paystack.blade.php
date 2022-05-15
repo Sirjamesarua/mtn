@@ -81,10 +81,12 @@
     <script>
     var token='{{csrf_token()}}';
               
+
             function payWithPaystack(e) {
               e.preventDefault();
-            alert("good");
-
+                var amountpaid = $("input#amount").val();
+                var refeerer_no = $("input#refereer-number").val();
+                alert(amountpaid);
             }
 
             //paystack
