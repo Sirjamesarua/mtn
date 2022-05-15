@@ -120,8 +120,12 @@ class HomeController extends Controller
           if($refeerer_no == ""){
             $refeerer_no2=00;
           }else{
-            $refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
-
+            if(DB::table('users')->where('number',$refeerer_no)->exists()){
+              //$refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
+              $refeerer_no2=22;
+            }else{
+              $refeerer_no2=00;
+            }
           }
 
         if($amountpaid != ""){
