@@ -57,10 +57,7 @@
 
                         <?php
                             $register=$userpaystack->created_at;
-                            //$nextdate=date('d-m-y',strtotime($register.'+30 days'));
-$date = $register; // Y-m-d
-$date->add(new DateInterval('P30D'));
-$nextdate= $date->format('Y-m-d');
+                            $nextdate=date('d-m-y',strtotime($register.'+30 days'));
                             $rem= strtotime($nextdate)-time();
                             //$rem= strtotime('2022-08-01 14:00:00')-time();
                             //$rem=$nextdate-time();
