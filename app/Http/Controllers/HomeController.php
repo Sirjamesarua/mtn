@@ -120,9 +120,9 @@ class HomeController extends Controller
           if($refeerer_no == ""){
             $refeerer_no2=00;
           }else{
-            if(DB::table('users')->where('number',$refeerer_no)->exists()){
-              //$refeerer_no2=Users::find($id)->where('number',$refeerer_no)->first();
-              $refeerer_no2=22;
+            if(DB::table('users')->where('id',$refeerer_no)->exists()){
+              //$refeerer_no2=DB::table('users')->where('number',$refeerer_no)->first()->get();
+              $refeerer_no2=$refeerer_no;
             }else{
               $refeerer_no2=00;
             }

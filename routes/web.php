@@ -45,6 +45,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/register/{number}/{id}', function($number,$id){
+  $cookie_name="refeererid";
+  $cookie_value=$id;
+  setcookie("refeererid",$id,time()+120,"/");
+  //return view("welcome")->with('id',$cookie_value);
+  return Redirect::to('login');
+});
 //Route::get('/verify-payment/{reference}', [App\Http\Controllers\Auth\HomeController::class, 'verify']);
 
 Route::get('/verify-payment/{reference}', function($reference){

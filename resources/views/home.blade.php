@@ -53,11 +53,22 @@
 
                                 <hr />
                                 <br />
+
+
+                        <?php
+                            $register=$userpaystack->created_at;
+                            $nextdate=date('d-m-y',strtotime($register.'+30 days'));
+                            //$rem= strtotime('2022-08-01 14:00:00')-time();
+                            $rem=$nextdate-time();
+                            $day=floor($rem/86400);
+                            $hr=floor(($rem%86400)/3600);
+
+                         ?>
                                 
 
 
                         <div class="container">
-                            <small><b><i class="w3-text-red">3days 44hours remaining for withdrawal</small><br>
+                            <small><b><i class="w3-text-red"><?php echo $day."days ".$hr."hours " ?>remaining for withdrawal</small><br>
                             <small><b><i class="w3-text-blue">Invite a friend and earn &#8358 3,000</small>
                             <br />
                             <br />
