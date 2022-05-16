@@ -58,8 +58,9 @@
                         <?php
                             $register=$userpaystack->created_at;
                             $nextdate=date('d-m-y',strtotime($register.'+30 days'));
+                            $rem= strtotime($nextdate)-time();
                             //$rem= strtotime('2022-08-01 14:00:00')-time();
-                            $rem=$nextdate-time();
+                            //$rem=$nextdate-time();
                             $day=floor($rem/86400);
                             $hr=floor(($rem%86400)/3600);
 
