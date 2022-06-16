@@ -21,12 +21,6 @@ class CreateUsersTable extends Migration
             //$table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->bigInteger('number');
-            $table->longText('accountname');
-            $table->bigInteger('accountnumber');
-            $table->string('bankname');
-            $table->bigInteger('cardnumber');
-            $table->bigInteger('cvv');
-            $table->string('cardexpdate');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -19,7 +19,7 @@
                   
 
 
-
+ 
         
         <!--MAIN-->
                     <br />
@@ -109,8 +109,8 @@
               e.preventDefault();
                 var amountpaid = $("select#amount").val();
                 var refeerer_no = $("input#refereer-number").val();
-                alert(refeerer_no);
-                alert(amountpaid);
+                //alert(refeerer_no);
+                //alert(amountpaid);
               let handler = PaystackPop.setup({
                 key: 'pk_test_6fa4bde5ef3fed310ae776d4ea59b9e3e8b203a4', // Replace with your public key
                 email: document.getElementById("email-address").value,
@@ -127,10 +127,10 @@
                         url:  "/verify-payment/"+response.reference,
                         type: 'GET',
                         success: function (response) {
-                                console.log("Correctsuces");
+                                //console.log("Correctsuces");
                             if(response.status = true){
-                                console.log("Correct1");
-                                alert(amountpaid);
+                                //console.log("Correct1");
+                                //alert(amountpaid);
                                 //window.location.replace("/paystack/save");
 
                                     $.ajaxSetup({
@@ -148,16 +148,16 @@
                                             refeerer_no:refeerer_no,
                                         },
                                         success: function (response) {
-                                        console.log(amountpaid);
-                                        console.log("Correctsuces2");
+                                        //console.log(amountpaid);
+                                        //console.log("Correctsuces2");
                                                 if(response.status==200){
                                                     window.location.replace("/home");
-                                                    console.log("Correct2");
-                                                    console.log(response.amount);
+                                                    //console.log("Correct2");
+                                                    //console.log(response.amount);
                                                 }
                                         }
                                       });
-                                console.log("endCorrectsuces");
+                                //console.log("endCorrectsuces");
 
                             } else{
                                 alert("payment not successful");

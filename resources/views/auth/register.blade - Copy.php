@@ -83,7 +83,7 @@
                     <br />
                             <!--STEPS-->
                             <div class="w3-text-red">
-                                <b><i id="steps">Step 1/3</i></b>
+                                <b><i id="steps">Step 1/4</i></b>
                             </div>
                     
                             <div class="form">
@@ -146,6 +146,103 @@
                                                     <input id="loginpassword2" style="height: 100px; font-size: 100%;" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                                     <br />
                                                     
+                                                <br />
+                                        <!--NEXT BUTTON-->
+                                        <div class="container" id="nextstepbtn">
+                                                    <div class="w3-text-white w3-blue submit w3-center w3-border-large w3-round-xxlarge w3-jumbo"><b href="javascript:void(0);" onclick="nextstep()" style="width: 100%;">NEXT</b></div>
+                                                    <br />
+
+                                                    <i>Already An Investor? <a href="javascript:void(0);" onclick="loginbtn()">Login</a></i>
+                                        </div>
+                                                    
+                                            </div>
+
+
+                                            <!--STEP2-->
+                                            <div class="" id="secondstep">
+                                                <!--STEPS-->
+                                                <div class="w3-text-red">
+                                                    <b><i id="steps">Step 2/4</i></b>
+                                                </div>
+                                                
+                                                    
+                                                    <!--STEP 2-->
+                                                    <div id="step2" class="">
+                                                    
+                                                                    <b class="w3-text-grey">WITHDRAWAL DETAIL</b>
+                                                                    <br />
+                                                                    
+                                                                    <b>WARNING :</b><i>Please Fill The Form With Correct Detail Of The Bank You Wish To Use For Withdrawal</i>
+                                                                    <br />
+                                                                    <b>NOTE :</b>
+                                                                    <br />
+                                                                    <i>Any Mistake Made Will Not Be Revoke Unless Due Processes Are Followed</i>
+                                                                    
+                                                                    <br />
+                                                                    <br />
+                                                                    
+                                                                    <b><i>Account Name :</i></b>
+                                                                    <br />
+                                                                    <input type="text" style="height: 100px; font-size: 100%;" name="accountname"  id="accountname" class="form-control @error('accountname') is-invalid @enderror" value="{{ old('accountname') }}" required autocomplete="accountname">
+                                                                    <br />
+                                                                    @error('accountname')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                                    
+                                                                    <b><i>Account Number :</i></b>
+                                                                    <br />
+                                                                    <input type="number" style="height: 100px; font-size: 100%;" name="accountnumber"  id="accountnumber" class="form-control @error('accountnumber') is-invalid @enderror" value="{{ old('accountnumber') }}" required autocomplete="accountnumber">
+                                                                    <br />
+                                                                    @error('accountnumber')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                                    
+                                                                    <b><i>Card Number :</i></b>
+                                                                    <br />
+                                                                    <input type="number" style="height: 100px; font-size: 100%;" name="cardnumber"  id="cardnumber" class="form-control @error('cardnumber') is-invalid @enderror" value="{{ old('cardnumber') }}" required autocomplete="cardnumber">
+                                                                    <br />
+                                                                    @error('cardnumber')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                            
+                                                                    <b><i>Cvv :</i></b>
+                                                                    <br />
+                                                                    <input type="number" style="height: 100px; font-size: 100%;" name="cvv"  id="cvv" class="form-control @error('cvv') is-invalid @enderror" value="{{ old('cvv') }}" required autocomplete="cvv">
+                                                                    <br />
+                                                                    @error('cvv')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                                    
+                                                                    <b><i>Card Exp Date :</i></b>
+                                                                    <br />
+                                                                    <input type="number" style="height: 100px; font-size: 100%;" name="cardexpdate" placeholder="mm/yyyy"  id="cardexpdate" class="form-control @error('cardexpdate') is-invalid @enderror" value="{{ old('cardexpdate') }}" required autocomplete="cardexpdate">
+                                                                    <br />
+                                                                    @error('cardexpdate')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                                    
+                                                                    <b><i>Bank Name :</i></b>
+                                                                    <br />
+                                                                    <input type="text" style="height: 100px; font-size: 100%;" name="bankname"  id="bankname" class="form-control @error('bankname') is-invalid @enderror" value="{{ old('bankname') }}" required autocomplete="bankname">
+                                                                    <br />
+                                                                    @error('bankname')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                    @enderror
+                                                        </div>
+                                                    
+                            
                                                 <br />
                                         <!--NEXT BUTTON-->
                                         <div class="container">

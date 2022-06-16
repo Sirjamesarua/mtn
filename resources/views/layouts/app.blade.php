@@ -28,6 +28,10 @@
                     display:flex;
                     justify-content:center;
                 }
+
+                #invitelinkdiv{
+                    display: none;
+                }
                 
                  
                 /*MAIN HEADER*/
@@ -108,7 +112,7 @@
                             width:100px;
                     }
 
-                    #secondstep{
+                    #withdrawalform{
                         display: none;
                     }
 
@@ -318,8 +322,20 @@
 
         //navigator.clipboard.writeText(copytext);
 
-        alert(copytext);
+        //alert(copytext);
     }
+
+     
+
+    function invitelink(){
+        var invitelinkdiv=document.getElementById("invitelinkdiv");
+        if(invitelinkdiv.style.display=="none"){
+            invitelinkdiv.style.display="block";
+        }else{
+            invitelinkdiv.style.display="none";
+        }
+    }
+
 
 
 
