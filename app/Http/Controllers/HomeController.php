@@ -73,7 +73,8 @@ class HomeController extends Controller
 
 
         $curl = curl_init();
-         $sec="sk_test_c6804e7ad469d1e972bb693b13e25018a09d3cc2";
+         //$sec="sk_test_c6804e7ad469d1e972bb693b13e25018a09d3cc2";
+         $sec="sk_live_0aeb5091e20f80e9e5ea2d53f077976fd31e4d9b";
           
           curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.paystack.co/transaction/verify/:reference",
