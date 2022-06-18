@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('w3.css')}}" />
     <link rel="stylesheet" href="{{asset('bootstrap.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ></link><meta charset="utf-8">
+    <link rel="shortcut icon" href="/mtnfavicon.ico" type="image/x-icon" />
     
     <style>
                 body{
