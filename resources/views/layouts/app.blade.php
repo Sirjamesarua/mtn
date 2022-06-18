@@ -140,7 +140,7 @@
                                 <div class="container menu-list-container w3-center w3-xxxlarge">
                                 
                                         <br />
-                                        <div class="menu-list"><a href="#"><b>HOME</b></a></div>
+                                        <div class="menu-list"><a href="/"><b>HOME</b></a></div>
                                         <div class="w3-border"></div>
                                         <br />
                                         

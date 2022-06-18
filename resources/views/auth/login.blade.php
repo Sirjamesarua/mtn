@@ -27,7 +27,7 @@
                     <div class="text-container w3-center">
                                 <div class="text w3-jumbo">
                                             <i class="w3-text-red">MTN X2 PROMO </i>
-                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 5000 To &#8358 20,000 Of Our Loyal Customer After 30days</i>
+                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 5000 To &#8358 30,000 Of Our Loyal Customer After 14days</i>
                                 </div>
                     </div>
                     
@@ -51,6 +51,10 @@
                                 <br />
                                 <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
                                             <b>&#8358 20,000 ==> &#8358 40,000</b>
+                                </div>
+                                <br />
+                                <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
+                                            <b>&#8358 30,000 ==> &#8358 60,000</b>
                                 </div>
                                 <br />
                                 
