@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Auth;
 //Route::get('/','App\Http\Controllers\PagesController@index');
 
 
+Route::get('/paystack/addpaystack', [App\Http\Controllers\HomeController::class, 'addpaystack'])->name('addpaystack');
+Route::post('/paystack/addpaystack', [App\Http\Controllers\HomeController::class, 'savepaystack'])->name('savepaystack');
 Route::get('/paystack', [App\Http\Controllers\HomeController::class, 'paystack'])->name('paystack');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

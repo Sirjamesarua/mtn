@@ -27,7 +27,7 @@
                     <div class="text-container w3-center">
                                 <div class="text w3-jumbo">
                                             <i class="w3-text-red">MTN X2 PROMO </i>
-                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 5000 To &#8358 30,000 Of Our Loyal Customer After 14days</i>
+                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 5000 To &#8358 50,000 Of Our Loyal Customer After 21days</i>
                                 </div>
                     </div>
                     
@@ -37,10 +37,6 @@
                     <br />
                     <div class="container price-container">
                     
-                                <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
-                                            <b>&#8358 5000 ==> &#8358 10,000</b>
-                                </div>
-                                <br />
                                 <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
                                             <b>&#8358 10,000 ==> &#8358 20,000</b>
                                 </div>
@@ -54,7 +50,11 @@
                                 </div>
                                 <br />
                                 <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
-                                            <b>&#8358 30,000 ==> &#8358 60,000</b>
+                                            <b>&#8358 50,000 ==> &#8358 100,000</b>
+                                </div>
+                                <br />
+                                <div class="price w3-round-jumbo w3-white w3-center w3-xxxlarge w3-border-large">
+                                            <b>&#8358 100,000 ==> &#8358 200,000</b>
                                 </div>
                                 <br />
                                 
@@ -158,6 +158,7 @@
 
                                                     <i>Already An Investor? <a href="javascript:void(0);" onclick="loginbtn()">Login</a></i>
                                         </div>
+                                        
                                                     
                                             </div>
 
@@ -229,6 +230,14 @@
 
                                         <i>Not An Investor? <a href="javascript:void(0);" onclick="registerbtn()">Register</a></i>
                                                     
+
+
+                                        @if (Route::has('password.request'))
+                                            <a class="btn btn-link" href="{{ route('password.request') }}" style="font-size:100%;">
+                                                {{ __('Forgot Your Password?') }}
+                                            </a>
+                                        @endif
+
                                             </form>
                                     </div>
                             </div>

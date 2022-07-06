@@ -64,9 +64,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $token= \Str::random(60);
         return User::create([
             'email' => $data['email'],
             'number' => $data['number'],
+            'token' => $token,
             'password' => Hash::make($data['password']),
         ]);
     }

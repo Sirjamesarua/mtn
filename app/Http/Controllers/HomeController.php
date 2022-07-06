@@ -26,14 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $usernumber = auth()->user()->number;
+        $usertoken = auth()->user()->token;
         $userid=auth()->user()->id;
         $userpaystacks = DB::table('paystacks')->where('userid',$userid)->get();
         $invites = DB::table('paystacks')->where('refeererid',$userid)->count();
         if(DB::table('paystacks')->where('userid',$userid)->exists()){
-            return view('home')->with('userpaystacks',$userpaystacks)->with('invites',$invites)->with('usernumber',$usernumber);
+            return view('home')->with('userpaystacks',$userpaystacks)->with('invites',$invites)->with('usertoken',$usertoken);
         }else{
-            return redirect('/paystack');
+            return redirect('/paystack'); 
         }
     }
 
@@ -45,6 +45,42 @@ class HomeController extends Controller
         }else{
             return view('paystack');
         }
+    }
+
+    public function addpaystack()
+    {
+        $userid=auth()->user()->id;
+        //return view('addpaystack');
+        
+        if(DB::table('paystacks')->where('userid',$userid)->exists()){
+          return view('home')->with('userpaystacks',$userpaystacks)->with('invites',$invites)->with('usernumber',$usernumber);
+        }else{
+          return view('addpaystack');
+        }
+
+    }
+
+    public function savepaystack()
+    {
+        $amountpaid=$_POST['amountpaid'];
+        $refeerer_no=$_POST['refereer-no'];
+        $userid=auth()->user()->id;
+
+        $paystack = new Paystack;
+        $paystack->userid=$userid;
+        $paystack->amount=$amountpaid;
+        $paystack->refeererid=$refeerer_no;
+        $paystack->save();
+        
+        return redirect('/home');
+        /*if(
+          DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no])){
+            return redirect('/home'); 
+          }else{
+            return redirect('/paystack/addpaystack');
+          }
+        //DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no2]);
+        //return $refeerer_no;
     }
 
     public function verify($reference){

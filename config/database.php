@@ -61,8 +61,8 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
-        ],*/
-
+        ],
+*/
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL','mysql://baf31754c9fc8d:fcd0b278@us-cdbr-east-05.cleardb.net/heroku_bfc791d0ec88583?reconnect=true'),

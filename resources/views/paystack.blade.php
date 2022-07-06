@@ -43,6 +43,8 @@
                               <label for="amount">Amount</label>
                               <!--<input type="tel" id="amount" name="amountpaid" required />-->
                               <select id="amount" name="amountpaid" style="width: 60%">
+                                <option value=100000>&#8358 100,000</option>
+                                <option value=30000>&#8358 50,000</option>
                                 <option value=30000>&#8358 30,000</option>
                                 <option value=20000>&#8358 20,000</option>
                                 <option value=15000>&#8358 15,000</option>

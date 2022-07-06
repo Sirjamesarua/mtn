@@ -22,7 +22,7 @@
 
                         @php
                                 $stackamount=$userpaystack->amount;
-                                $invitesprice= 3000 * $invites;
+                                $invitesprice= 5000 * $invites;
                                 $stackdouble= 2 * $stackamount;
                                 $totalprice= $invitesprice + $stackdouble;
                         @endphp
@@ -68,7 +68,7 @@
                             $register=$userpaystack->created_at;
                             $nextdate=date('y/m/d',strtotime($register.'+14 days'));
                             //$nextdate=$register.'+14 days';
-                            $newdate=strtotime($register.'+14 days');
+                            $newdate=strtotime($register.'+21 days');
                             $rem= $newdate-time();
                             $time=time();
                             if($time>=$newdate){
@@ -92,7 +92,8 @@
 
                         <div class="container">
                             <small><b><i class="w3-text-red"><?php echo $withdrawalinfo ?></small><br>
-                            <small><b><i class="w3-text-blue">Invite a friend and earn &#8358 3,000</small>
+                            <small><b><i class="w3-text-blue">Invite a friend and earn &#8358 5,000</small><br>
+                            <small><b><i class="w3-text-blue">Invite 20 friends and earn &#8358 200,000</small>
                             <br />
                             <br />
                             <div class="row">
@@ -116,7 +117,7 @@
 
                         ?>
                         <div id="invitelinkdiv">
-                            <input id="invitelink" type="text" value="{{$homelink}}/{{$usernumber}}/{{auth()->user()->id}}" class="" readonly>
+                            <input id="invitelink" type="text" value="{{$homelink}}/{{$usertoken}}/{{auth()->user()->id}}" class="" readonly>
                             <button onclick="copyrefeererlink()">copy</button>
                         </div>
 
