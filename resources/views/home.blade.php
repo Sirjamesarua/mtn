@@ -93,7 +93,7 @@
                         <div class="container">
                             <small><b><i class="w3-text-red"><?php echo $withdrawalinfo ?></small><br>
                             <small><b><i class="w3-text-blue">Invite a friend and earn &#8358 5,000</small><br>
-                            <small><b><i class="w3-text-blue">Invite 20 friends and earn &#8358 200,000</small>
+                            <small><b><i class="w3-text-blue">Invite 20 friends and earn &#8358 250,000</small>
                             <br />
                             <br />
                             <div class="row">
