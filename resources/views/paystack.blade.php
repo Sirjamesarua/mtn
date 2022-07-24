@@ -49,7 +49,7 @@
                                 <option value=20000>&#8358 20,000</option>
                                 <option value=15000>&#8358 15,000</option>
                                 <option value=10000>&#8358 10,000</option>
-                                <option value=50>&#8358 5,000</option>
+                                <option value=100>&#8358 5,000</option>
                               </select>
                             </div>
                             <div class="form-group">
