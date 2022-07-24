@@ -66,11 +66,14 @@ class HomeController extends Controller
         $refeerer_no=$_POST['refereer-no'];
         $userid=auth()->user()->id;
 
-        $paystack = new Paystack;
+        /*$paystack = new Paystack;
         $paystack->userid=$userid;
         $paystack->amount=$amountpaid;
         $paystack->refeererid=$refeerer_no;
-        $paystack->save();
+        $paystack->save();*/
+
+
+            DB::insert('insert into paystacks (amount, userid, refeererid) values (?, ?, ?)', [$amountpaid, $userid, $refeerer_no]);
         
         return redirect('/home');
         /*if(
