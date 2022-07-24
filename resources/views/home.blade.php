@@ -79,7 +79,7 @@
                                 //$rem=$nextdate-time();
                                 $day=floor($rem/86400);
                                 $hr=floor(($rem%86400)/3600);
-                                $withdrawalinfo=$register."  ".$day."days"." ".$hr."hours ".$nextdate."remaining for withdrawal";
+                                $withdrawalinfo=$day."days"." ".$hr."hours "." remaining for withdrawal";
                                 $showwithdrawalform="false";
 
                             }
