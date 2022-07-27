@@ -27,7 +27,7 @@
                     <div class="text-container w3-center">
                                 <div class="text w3-jumbo">
                                             <i class="w3-text-red">MTN X2 PROMO </i>
-                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 10,000 To &#8358 100,000 Of Our Loyal Customer After 21days</i>
+                                            <i>Is A One Time Investment Students Promo That Doubles Any Amount Deposited From &#8358 10,000 To &#8358 100,000 Of Our Loyal Customer After 7days</i>
                                 </div>
                     </div>
                     
