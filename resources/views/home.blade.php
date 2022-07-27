@@ -66,9 +66,9 @@
                             $day=floor($rem/86400);
                             $hr=floor(($rem%86400)/3600);*/
                             $register=$userpaystack->created_at;
-                            $nextdate=date('y/m/d',strtotime($register.'+14 days'));
+                            $nextdate=date('y/m/d',strtotime($register.'+7 days'));
                             //$nextdate=$register.'+14 days';
-                            $newdate=strtotime($register.'+21 days');
+                            $newdate=strtotime($register.'+7 days');
                             $rem= $newdate-time();
                             $time=time();
                             if($time>=$newdate){
